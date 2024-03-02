@@ -5,6 +5,8 @@ class Porter < Formula
   head "https://github.com/dellisd/porter.git"
 
   if OS.mac?
+    depends_on "curl"
+
     if Hardware::CPU.arm?
       url "https://github.com/dellisd/porter/releases/download/latest/porter-macosArm64.zip"
     else
